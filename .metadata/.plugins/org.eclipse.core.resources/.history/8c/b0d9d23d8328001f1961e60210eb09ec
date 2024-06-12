@@ -1,0 +1,40 @@
+package com.ohgiraffers.section03.map;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.Map;
+
+import com.ohgiraffers.model.dto.MemberDTO;
+
+@WebServlet("/receive/map")
+public class ReceiveMapServlet extends HttpServlet {
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+      
+		MemberDTO member1 = new MemberDTO("get", "squirrel", "nam", 200);
+		MemberDTO member2 = new MemberDTO("get", "pig", "nam", 300);
+		MemberDTO member3 = new MemberDTO("get", "tiger", "nam", 500);
+		MemberDTO member4 = new MemberDTO("get", "sheep", "nam", 170);
+		
+		Map<String, MemberDTO> memberMap = new HashMap<>();
+		 //map은 key-value로 저장하니까 key를 문자열로 줘서 객체를 담아보기
+		memberMap.put("one",member1);
+		memberMap.put("two",member2);
+		memberMap.put("three",member3);
+		memberMap.put("four",member4);
+		
+		System.out.println(memberMap);
+		
+		response.setContentType("application/json; charset=UTF-8");
+		PrintWriter out = response.getWriter();
+		out.print(memberMap);
+		out.close();
+	}
+
+}

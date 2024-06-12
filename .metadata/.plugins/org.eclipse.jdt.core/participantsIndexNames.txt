@@ -1,0 +1,9 @@
+INDEX VERSION 1.134
+D:\workspace\03_ajax\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1403112804.index
+\chap01-jquery-ajax\src\main\java
+D:\workspace\03_ajax\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1584950642.index
+\chap03-object-receive\src\main\java
+D:\workspace\03_ajax\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1417490627.index
+\chap04-json-simple\src\main\java
+D:\workspace\03_ajax\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2795108978.index
+\chap02-json-string\src\main\java
